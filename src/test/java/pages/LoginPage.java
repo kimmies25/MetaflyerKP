@@ -33,8 +33,8 @@ public class LoginPage extends WebUI {
     public void loginMetaflyer(String loginId, String loginPassword) {
         setLoginId(loginId);
         setLoginPassword(loginPassword);
+        clickLoginButton();
     }
-
 
     public void verifyLoginFail(String expectedMessage) {
         String actualMessage = getElementText(LoginLocator.loginFailedMessage);
