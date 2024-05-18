@@ -22,7 +22,6 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class BaseTest {
-
     public WebDriver driver;
 
     @BeforeMethod
@@ -37,9 +36,7 @@ public class BaseTest {
         if (browserName.equals("firefox")) {
             driver = new FirefoxDriver();
         }
-
         driver.manage().window().maximize();
-        //driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20)); //Dành cho Junior
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(20));
     }
 
@@ -52,13 +49,4 @@ public class BaseTest {
         }
         driver.quit();
     }
-
-
-    public void clickElement(String locator) {
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-        //wait.Util(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(locator))));
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(locator)));
-        driver.findElement(By.xpath(locator)).click();
-    }
-
 }

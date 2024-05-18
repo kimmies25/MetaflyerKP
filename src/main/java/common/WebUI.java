@@ -66,11 +66,6 @@ public class WebUI {
         }
     }
 
-    public static void openURL(String url) {
-        getDriver().get(url);
-        logConsole("Open URL: " + url);
-    }
-
     public static void clickElement(By by) {
         waitForElementClickable(by);
         getWebElement(by).click();
@@ -118,7 +113,6 @@ public class WebUI {
         }
     }
 
-
     //Wait for Element
 
     public static void waitForElementVisible(By by) {
@@ -140,6 +134,7 @@ public class WebUI {
             logConsole("Timeout waiting for the element ready to click. " + by.toString());
         }
     }
+
     public static void assertEquals(Object actual, Object expected) {
         waitForPageLoaded();
         System.out.println("Assert equals: " + actual + " and " + expected);
@@ -150,7 +145,8 @@ public class WebUI {
         JavascriptExecutor js = (JavascriptExecutor) driver;
         js.executeScript("arguments[0].scrollIntoView(true);", getWebElement(element));
     }
-    public static boolean checkElementDisplayed(By by){
+
+    public static boolean checkElementDisplayed(By by) {
         waitForElementVisible(by);
         boolean check = getWebElement(by).isDisplayed();
         return check;

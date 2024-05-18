@@ -9,7 +9,6 @@ import org.testng.Assert;
 import common.WebUI;
 
 
-
 public class LoginPage extends WebUI {
     WebDriver driver; // checking
 
@@ -26,7 +25,7 @@ public class LoginPage extends WebUI {
     public void setLoginPassword(String loginPassword) {
         setText(LoginLocator.loginInputPassword, loginPassword);
     }
-    
+
     private void clickLoginButton() {
         clickElement(LoginLocator.loginLoginButton);
     }
@@ -37,8 +36,7 @@ public class LoginPage extends WebUI {
     }
 
 
-
-    public void verifyLoginFail(String expectedMessage){
+    public void verifyLoginFail(String expectedMessage) {
         String actualMessage = getElementText(LoginLocator.loginFailedMessage);
         assertEquals(actualMessage, expectedMessage);
     }

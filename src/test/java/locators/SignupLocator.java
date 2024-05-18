@@ -8,6 +8,7 @@ public class SignupLocator {
     public static By inputId = By.xpath("//input[@id='id']");
     public static By doubleCheckButton = By.xpath("//button[@class='button button-check-email']");
     public static By doubleCheckMessage = By.xpath("//div[@class='metaflyer_register_form_field_msg metaflyer_register_form_field_msg_success']");
+    public static By passwordLabel = By.xpath("//label[@for='password']");
     public static By inputPassword = By.xpath("//input[@id='password']");
     public static By inputPasswordVerify = By.xpath("//input[@id='password-verify']");
     public static By inputEmail = By.xpath("//input[@id='email']");
@@ -19,7 +20,5 @@ public class SignupLocator {
     public static By registerPageTitle = By.xpath("//div[@class='metaflyer_register_title']");
     public static By registerCompleteButton = By.xpath("//button[contains(text(),'가입완료')]");
     public static By membershipCompleted = By.xpath("//h1[@class='metaflyer_register_completed_title']");
-    public static By completedPageloginButton = By.xpath("//button[contains(text(),'로그인')]");
-
 
 }
