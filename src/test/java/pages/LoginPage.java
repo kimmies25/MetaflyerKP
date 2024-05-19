@@ -1,22 +1,18 @@
 package pages;
 
-import locators.HomepageLocator;
 import locators.LoginLocator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.bidi.log.Log;
-import org.testng.Assert;
 
 import common.WebUI;
 
 
 public class LoginPage extends WebUI {
-    WebDriver driver; // checking
+    WebDriver driver;
 
     public LoginPage(WebDriver driver) {
         super(driver);
         this.driver = driver;
     }
-
 
     public void setLoginId(String loginId) {
         setText(LoginLocator.loginInputId, loginId);

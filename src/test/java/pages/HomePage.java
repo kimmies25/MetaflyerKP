@@ -1,11 +1,9 @@
 package pages;
 
-import common.BaseTest;
 import common.WebUI;
 import locators.HomepageLocator;
-import locators.LoginLocator;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
+
 
 public class HomePage extends WebUI {
 
